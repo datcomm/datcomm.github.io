@@ -23,7 +23,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         false;
+$use-grids:         true;
 $use-flexbox:       false;
 $use-columns:       false;
 $use-nav:           false;
@@ -40,9 +40,9 @@ $use-this-or-this:  false;
 $use-link-complex:  false;
 $use-flyout:        false;
 $use-arrows:        false;
-$use-sprite:        false;
-$use-icon-text:     false;
-$use-beautons:      false;
+$use-sprite:        true;
+$use-icon-text:     true;
+$use-beautons:      true;
 $use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
@@ -58,7 +58,10 @@ $use-greybox:       false;
 /**
  * Place any variables that should override inuit.css’ defaults here.
  */
+$brand-color:	#60ed92;
+$brand-face:	"Courier", monospace;
 
+$beautons-positive:$brand-color;
 
 
 
@@ -69,3 +72,13 @@ $use-greybox:       false;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+
+/* scaled dimensions for responsive logo */
+$logo-height:				147px;
+$logo-width:				945px;
+
+$logo-height--lap-and-up:	$logo-height/7*3;
+$logo-width--lap-and-up:	$logo-width/7*3;
+
+$logo-height--palm:			$logo-height/3;
+$logo-width--palm:			$logo-width/3;

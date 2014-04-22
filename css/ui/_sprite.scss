@@ -1,0 +1,24 @@
+/*------------------------------------*\
+	SPRITE.CSS
+\*------------------------------------*/
+@font-face { font-family:'FontAwesome'; src:url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3'); src:url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format("embedded-opentype"), url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3') format("woff"), url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3') format("truetype"); font-weight:normal; font-style:normal; }
+
+.icon{ font-family:'FontAwesome'; }
+
+.sprite, %sprite{
+	background-image:url('img/sprite.png');
+	background-repeat:no-repeat;
+}
+
+%sprite--logo{
+	background-position:0px 0px;
+	background-size:100% 100%;
+	width:$logo-width--palm;
+	height:$logo-height--palm;
+
+
+	@include media-query(lap-and-up){
+		width:$logo-width--lap-and-up;
+		height:$logo-height--lap-and-up;
+	}
+}

@@ -1,0 +1,26 @@
+/*------------------------------------*\
+	BTN.CSS
+\*------------------------------------*/
+.btn{
+	@include vendor(border-radius, 0px);
+	position:relative;
+	top:0px;
+
+	&:active{ top:1px; }
+}
+
+.btn--positive{
+	background-color:white;
+	border-color:darken($brand-color, 20%);
+	border-width:1px;
+	border-style:solid;
+	color:darken($brand-color, 20%);
+	@include vendor(transition, color .2s, border-color .2s);
+
+	&:hover, &:active{
+		border-color:darken($brand-color, 30%);
+		color:darken($brand-color, 30%);
+	}
+
+
+}
