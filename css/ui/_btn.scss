@@ -11,16 +11,16 @@
 }
 
 .btn--positive{
-	background-color:lighten($brand-color, 35%);
-	border-color:darken($brand-color, 20%);
+	@include vendor(transition, color .2s, background-color .2s);
+	background-color:lighten($brand-color, 32%);
+	border-color:lighten($brand-color, 30%);
 	border-width:1px;
 	border-style:solid;
 	color:darken($brand-color, 20%);
-	@include vendor(transition, color .2s, border-color .2s, background-color .2s);
 
 	&:hover, &:active{
-		background-color:lighten($brand-color, 34%);
-		border-color:darken($brand-color, 25%);
+		background-color:lighten($brand-color, 30%);
+		border-color:lighten($brand-color, 28%);
 		color:darken($brand-color, 25%);
 	}
 
