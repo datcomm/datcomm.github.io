@@ -10,6 +10,7 @@ body{
 	border-left-width:0px;
 	border-color:lighten($brand-color, 20%);
 	border-style:solid;
+	padding:0px $base-spacing-unit;
 
 	font-family:$brand-face;
 
@@ -31,7 +32,6 @@ body{
 	margin-left:auto;
 	position:relative;
 	top:50%;
-	padding:$base-spacing-unit 0px;
 	
 	@include media-query(lap-and-up){		
 		margin-top:-(($logo-height--lap-and-up + $contact-bar-plus-margin-height)/2);
