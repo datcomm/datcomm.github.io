@@ -9,20 +9,3 @@
 
 	&:active{ top:1px; }
 }
-
-.btn--positive{
-	@include vendor(transition, color .2s, background-color .2s);
-	background-color:lighten($brand-color, 32%);
-	border-color:lighten($brand-color, 30%);
-	border-width:1px;
-	border-style:solid;
-	color:darken($brand-color, 20%);
-
-	&:hover, &:active{
-		background-color:lighten($brand-color, 30%);
-		border-color:lighten($brand-color, 28%);
-		color:darken($brand-color, 25%);
-	}
-
-
-}

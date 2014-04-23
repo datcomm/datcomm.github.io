@@ -19,7 +19,7 @@ body{
 	$contact-bar-plus-margin-height--palm:	$base-spacing-unit + (38px * 2); 	/* (logo margin + btn margin) + stacked btn height */
 
 	display:block;
-	margin-top:-(($logo-height--palm+$contact-bar-plus-margin-height--palm)/2);
+	margin-top:-(($logo-height--palm + $contact-bar-plus-margin-height--palm)/2);
 	margin-right:auto;
 	margin-bottom:0px;
 	margin-left:auto;
@@ -47,11 +47,24 @@ body{
 		display:block;
 		margin:0px auto;
 		max-width:$logo-width--palm;
+		text-align:center;
 
-		@include media-query(lap-and-up){ max-width:$logo-width--lap-and-up; }
-
-		& .btn{
-			@include font-size(11px);
-			&:first-child{ margin-bottom:$half-spacing-unit; }
-		}
+		@include media-query(lap-and-up){ max-width:$logo-width--lap-and-up; }		
 	}
+
+
+		.contact-bar__link{
+			@include font-size(11px);
+			@include vendor(transition, color .2s);
+			color:darken($brand-color, 20%);
+
+			@include media-query(lap-and-up){
+			    width:100%;
+			    padding-right:0;
+			    padding-left: 0;
+			    text-align:center;
+			}
+
+			&:first-child{ margin-bottom:$half-spacing-unit; }
+			&:hover, &:active{ color:darken($brand-color, 30%); }
+		}
