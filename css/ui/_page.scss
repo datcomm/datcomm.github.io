@@ -22,11 +22,11 @@ body{
 
 
 .page{
-	/* .datcomm-logo margin PLUS height of .contact-bar (38px) */
-	$contact-bar-plus-margin-height: $half-spacing-unit + 32px;
+	$contact-bar-plus-margin-height: 		$half-spacing-unit + 38px; 			/* logo margin + btn height */
+	$contact-bar-plus-margin-height--palm:	$base-spacing-unit + (38px * 2); 	/* (logo margin + btn margin) + stacked btn height */
 
 	display:block;
-	margin-top:-(($logo-height--palm+$contact-bar-plus-margin-height)/2);
+	margin-top:-(($logo-height--palm+$contact-bar-plus-margin-height--palm)/2);
 	margin-right:auto;
 	margin-bottom:0px;
 	margin-left:auto;
@@ -42,7 +42,12 @@ body{
 		@extend %sprite;
 		@extend %sprite--logo;
 		display:block;
-		margin:0px auto $half-spacing-unit auto;
+		margin-top:0px;
+		margin-right:auto;
+		margin-bottom:$base-spacing-unit;
+		margin-left:auto;
+
+		@include media-query(lap-and-up){ margin-bottom:$half-spacing-unit; }
 	}
 
 	.contact-bar{
@@ -52,10 +57,8 @@ body{
 
 		@include media-query(lap-and-up){ max-width:$logo-width--lap-and-up; }
 
-		& > *{
-			@include font-size(10px);
-			@include media-query(lap-and-up){
-				font-size:12px;
-			}
+		& .btn{
+			@include font-size(11px);
+			&:first-child{ margin-bottom:$half-spacing-unit; }
 		}
 	}
