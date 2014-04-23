@@ -4,18 +4,12 @@
 html,body{ height:100%; min-height:100%; }
 
 body{
-	border-top-width:1px;
-	border-right-width:0px;
-	border-bottom-width:$half-spacing-unit/2;
-	border-left-width:0px;
-	border-color:lighten($brand-color, 30%);
-	border-style:solid;
 	padding:0px $base-spacing-unit;
 
 	font-family:$brand-face;
 
 	@include media-query(lap-and-up){
-		border-bottom-width:$half-spacing-unit;
+		border-width:$half-spacing-unit/2;
 	}
 }
 
