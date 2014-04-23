@@ -1,3 +1,6 @@
 name: DATCOMM
+description: development / design / consulting
+twitter_handle: datcommdotcom
+default_twitter_card_img: http://datcomm.com/img/datcomm.png
 markdown: redcarpet
 pygments: true
